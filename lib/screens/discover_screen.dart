@@ -123,67 +123,21 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
   }
 
   Widget _buildBannerCard() {
-    return Container(
-      width: double.infinity,
-      height: 150,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        image: const DecorationImage(
-          image: NetworkImage('https://wantapi.com/assets/banner.png'),
-          fit: BoxFit.cover,
-        ),
-      ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16.0),
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20.0),
-          gradient: LinearGradient(
-            begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
-            colors: [
-              Colors.black.withOpacity(0.55),
-              Colors.black.withOpacity(0.15),
-            ],
-          ),
-        ),
-        padding: const EdgeInsets.all(20.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    'GIFT STORE',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      letterSpacing: 1.2,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Find your perfect device',
-                    style: TextStyle(fontSize: 16, color: Colors.white70),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.9),
-                borderRadius: BorderRadius.circular(16.0),
-              ),
-              padding: const EdgeInsets.all(16.0),
-              child: const Icon(
-                Icons.card_giftcard_outlined,
-                size: 36,
-                color: Colors.black87,
-              ),
-            ),
-          ],
+        height: 140,
+        width: double.infinity,
+        color: Colors.grey.shade200,
+        child: Image.network(
+          'https://wantapi.com/assets/banner.png',
+          fit: BoxFit.fill,
+          width: double.infinity,
+          errorBuilder: (context, error, stackTrace) {
+            return Container(
+              color: Colors.grey.shade300,
+            );
+          },
         ),
       ),
     );
