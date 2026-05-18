@@ -232,10 +232,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    '49${product.price.toStringAsFixed(2)}'.replaceFirst(
-                      '249',
-                      product.price.toStringAsFixed(2),
-                    ),
+                    '\$${product.price.toStringAsFixed(2)}',
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
