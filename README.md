@@ -1,17 +1,21 @@
-# flutter_application_1
+# Mini Katalog Uygulaması
 
-A new Flutter project.
+Bu proje, Flutter ile temel seviyede mobil uygulama geliştirme eğitimi kapsamında hazırlanmış bir "Mini Katalog Uygulaması" taslağıdır.
 
-## Getting Started
+## Proje İçeriği ve Özellikler
+- Tasarım mimarisine uygun temiz klasör yapısı (models, screens)
+- JSON simülasyonu veri modeli ve fromJson dönüştürme mantığı
+- GridView tabanlı ürün listeleme ve dinamik arama/filtreleme fonksiyonu
+- Named Routes (İsimlendirilmiş Rotalar) ve Route Arguments ile sayfalar arası veri taşıma
+- Tepeden aşağıya basit state yönetimi ile çalışan sepet sistemi simülasyonu
 
-This project is a starting point for a Flutter application.
+## Kullanılan Teknolojiler
+- Flutter SDK (Kendi bilgisayarındaki sürümü yazabilirsin, örn: 3.22.0)
+- Dart SDK
+- material.dart (Harici hiçbir ekstra paket kullanılmamıştır)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Çalıştırma Adımları
+1. Projeyi bilgisayarınıza indirin: `git clone <github-repo-linkiniz>`
+2. Proje klasörüne giriş yapın: `cd flutter_application_1`
+3. Gerekli bağımlılıkları yükleyin: `flutter pub get`
+4. Bir emülatör veya fiziksel cihaz bağladıktan sonra uygulamayı başlatın: `flutter run`
