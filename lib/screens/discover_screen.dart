@@ -134,9 +134,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
           fit: BoxFit.fill,
           width: double.infinity,
           errorBuilder: (context, error, stackTrace) {
-            return Container(
-              color: Colors.grey.shade300,
-            );
+            return Container(color: Colors.grey.shade300);
           },
         ),
       ),
