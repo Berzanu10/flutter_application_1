@@ -23,18 +23,12 @@ class CartScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
-          ),
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: const Text(
-          'Cart',
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text('Cart', style: TextStyle(color: Colors.black)),
       ),
       backgroundColor: Colors.white,
       body: cartItems.isEmpty
@@ -60,7 +54,10 @@ class CartScreen extends StatelessWidget {
               ),
             )
           : ListView.builder(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 16.0,
+              ),
               itemCount: cartItems.length,
               itemBuilder: (context, index) {
                 final product = cartItems[index];
@@ -115,10 +112,7 @@ class CartScreen extends StatelessWidget {
               children: [
                 const Text(
                   'Total',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   '\$${_totalPrice.toStringAsFixed(2)}',
@@ -143,18 +137,13 @@ class CartScreen extends StatelessWidget {
                 onPressed: () {
                   onClearCart();
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('Checkout successful!'),
-                    ),
+                    const SnackBar(content: Text('Checkout successful!')),
                   );
                   Navigator.pop(context);
                 },
                 child: const Text(
                   'Checkout',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
