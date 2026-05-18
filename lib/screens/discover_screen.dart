@@ -125,47 +125,66 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
   Widget _buildBannerCard() {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(20.0),
+      height: 150,
       decoration: BoxDecoration(
-        color: Colors.grey.shade300,
         borderRadius: BorderRadius.circular(20.0),
+        image: const DecorationImage(
+          image: NetworkImage('https://wantapi.com/assets/banner.png'),
+          fit: BoxFit.cover,
+        ),
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  'GIFT STORE',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.2,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          gradient: LinearGradient(
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+            colors: [
+              Colors.black.withOpacity(0.55),
+              Colors.black.withOpacity(0.15),
+            ],
+          ),
+        ),
+        padding: const EdgeInsets.all(20.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    'GIFT STORE',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      letterSpacing: 1.2,
+                    ),
                   ),
-                ),
-                SizedBox(height: 8),
-                Text(
-                  'Find your perfect device',
-                  style: TextStyle(fontSize: 16, color: Colors.black87),
-                ),
-              ],
+                  SizedBox(height: 8),
+                  Text(
+                    'Find your perfect device',
+                    style: TextStyle(fontSize: 16, color: Colors.white70),
+                  ),
+                ],
+              ),
             ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(16.0),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.9),
+                borderRadius: BorderRadius.circular(16.0),
+              ),
+              padding: const EdgeInsets.all(16.0),
+              child: const Icon(
+                Icons.card_giftcard_outlined,
+                size: 36,
+                color: Colors.black87,
+              ),
             ),
-            padding: const EdgeInsets.all(16.0),
-            child: const Icon(
-              Icons.card_giftcard_outlined,
-              size: 36,
-              color: Colors.black87,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -199,7 +218,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                 ),
                 child: Image.network(
                   product.imageUrl,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                   width: double.infinity,
                   errorBuilder: (context, error, stackTrace) {
                     return Container(
