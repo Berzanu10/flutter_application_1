@@ -10,7 +10,7 @@ Bu proje, Flutter ile temel seviyede mobil uygulama geliştirme eğitimi kapsam�
 - Tepeden aşağıya basit state yönetimi ile çalışan sepet sistemi simülasyonu
 
 ## Kullanılan Teknolojiler
-- Flutter SDK (Kendi bilgisayarındaki sürümü yazabilirsin, örn: 3.22.0)
+- Flutter SDK 3.22.0
 - Dart SDK
 - material.dart (Harici hiçbir ekstra paket kullanılmamıştır)
 
